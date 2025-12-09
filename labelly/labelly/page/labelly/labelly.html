@@ -1,0 +1,107 @@
+<div class="labelly-container" style="display:flex; gap:20px;">
+
+    <!-- LEFT: PREVIEW -->
+    <div id="preview_area" style="width:65%; border:1px solid #ddd; padding:10px; min-height:400px;">
+        <h4>Label Preview</h4>
+        <div id="preview_content"></div>
+    </div>
+
+    <!-- RIGHT: CONFIG PANEL -->
+    <div style="width:35%; border:1px solid #ddd; padding:10px;">
+        <h4>Configuration</h4>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Paper Width (mm)</label>
+                    <input type="number" class="form-control" id="paper_width" value="78.5">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Paper Height (mm)</label>
+                    <input type="number" class="form-control" id="paper_height" value="25">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Fields</label>
+            <table class="table table-bordered table-condensed" id="fields_table">
+                <thead>
+                    <tr>
+                        <th>Text</th>
+                        <th width="80">X</th>
+                        <th width="80">Y</th>
+                        <th width="50"></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button class="btn btn-xs btn-default" id="add_field">Add Field</button>
+        </div>
+
+        <div class="form-group">
+            <label>Barcode Value</label>
+            <input class="form-control" id="barcode_value" value="1234567890">
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Barcode Width</label>
+                    <input type="number" class="form-control" id="barcode_width" value="2">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Barcode Height</label>
+                    <input type="number" class="form-control" id="barcode_height" value="40">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Barcode Font Size</label>
+                    <input type="number" class="form-control" id="barcode_font_size" value="12">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Barcode Format</label>
+                    <select class="form-control" id="barcode_format">
+                        <option value="CODE128">CODE128</option>
+                        <option value="EAN13">EAN13</option>
+                        <option value="UPCA">UPCA</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Hide Barcode Text</label>
+                    <input type="checkbox" class="form-control" id="hide_barcode_text">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Add company Name</label>
+                    <input type="checkbox" class="form-control" id="add_company_name">
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary" id="update_preview">Update Preview</button>
+
+        <hr>
+
+        <button class="btn btn-success" id="generate_prn">Generate PRN</button>
+
+        <pre id="prn_output" style="margin-top:10px; background:#f5f5f5; padding:10px;"></pre>
+    </div>
+
+</div>
