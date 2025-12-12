@@ -1,7 +1,7 @@
 frappe.pages['labelly'].on_page_load = function (wrapper) {
     let page = frappe.ui.make_app_page({
         parent: wrapper,
-        title: 'Barcode Preview',
+        title: 'Label Preview',
         single_column: true
     });
 
